@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <ul>
+        {% for item in cart_items %}
+            <li>{{ item.product.name }} - {{ item.quantity }} x ${{ item.product.price }} = ${{ item.get_total_price }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Total: ${{ total_price }}</h2>
+</body>
+</html>
